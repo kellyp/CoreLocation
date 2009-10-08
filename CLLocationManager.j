@@ -93,7 +93,6 @@
             [self stopUpdatingLocation];
         
         _updateId = navigator.geolocation.watchPosition(function(position){
-            CPLogConsole(position);
             
             var coordinate = new CLLocationCoordinate2D(position.coords.latitude, position.coords.longitude);
             var newLocation = [[CLLocation alloc] initWithCoordinate: coordinate 
